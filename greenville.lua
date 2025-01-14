@@ -187,7 +187,7 @@ end
 
 local UserInputService = game:GetService("UserInputService")
 
-
+_G.AutoFarm = true
 local function onKeyPress(input, gameProcessed)
    
     if gameProcessed then return end
