@@ -167,7 +167,6 @@ _G.AutoFarm = false
 
 
 function Init()
-    print("AutoFarmInit")
    repeat task.wait() ---Waiting for customer logic
    -----Refresh vars
     if _G.AutoFarm==false then break end
