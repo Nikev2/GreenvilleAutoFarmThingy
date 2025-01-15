@@ -192,7 +192,7 @@ local function onKeyPress(input, gameProcessed)
    
     if gameProcessed then return end
 
-    if input.KeyCode == Enum.KeyCode.LeftControl then
+    if input.KeyCode == Enum.KeyCode.P then
        _G.AutoFarm = not _G.AutoFarm
         spawn(function()
             Init()
