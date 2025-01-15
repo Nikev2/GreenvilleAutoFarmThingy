@@ -174,7 +174,7 @@ function Init()
     Customer = Register.Parent:FindFirstChild("NPC")
     if Customer then
       while task.wait() do
-         if Customer.Head.ImageBubble.Enabled==true then
+         if Customer:WaitForChild("Head").ImageBubble.Enabled==true then
             break
          end
       end
