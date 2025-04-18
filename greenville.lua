@@ -160,7 +160,7 @@ function Cycle()
     end
     PrepareOrder()
 end
-_G.AutoFarm = false
+getgenv().AutoFarm = false
 
 
 
@@ -169,7 +169,7 @@ _G.AutoFarm = false
 function Init()
    repeat task.wait() ---Waiting for customer logic
    -----Refresh vars
-    if _G.AutoFarm==false then break end
+    if getgenv().AutoFarm==false then break end
     Lists = Register.Pad.Display.Register
     Customer = Register.Parent:FindFirstChild("NPC")
     if Customer then
@@ -181,19 +181,19 @@ function Init()
       Cycle()
     end
     
-    until _G.AutoFarm == false
+    until getgenv().AutoFarm == false
 end
 
 local UserInputService = game:GetService("UserInputService")
 
-_G.AutoFarm = true
+getgenv().AutoFarm = true
 Init()
 local function onKeyPress(input, gameProcessed)
    
     if gameProcessed then return end
 
     if input.KeyCode == Enum.KeyCode.P then
-       _G.AutoFarm = not _G.AutoFarm
+       getgenv().AutoFarm = not getgenv().AutoFarm
         spawn(function()
             Init()
         end)
